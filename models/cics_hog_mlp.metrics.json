@@ -1,0 +1,134 @@
+{
+  "dataset_dir": "data/CICS",
+  "classes": [
+    "Multibranched Crack",
+    "Simple Cracks",
+    "Without Crack"
+  ],
+  "seed": 42,
+  "split_counts": {
+    "train": 4064,
+    "validation": 870,
+    "test": 874,
+    "excluded_conflicting_label_files": 20
+  },
+  "image_size": 64,
+  "feature_extractor": "8-orientation HOG, 8x8 pixels per cell, 2x2 cells per block",
+  "classifier": "one-hidden-layer MLP (64 units), balanced mini-batches",
+  "epochs_run": 6,
+  "best_epoch": 3,
+  "best_validation_macro_f1_during_training": 0.78696521976693,
+  "validation": {
+    "sample_count": 870,
+    "accuracy": 0.8505747126436781,
+    "macro_f1": 0.78696521976693,
+    "per_class": {
+      "Multibranched Crack": {
+        "precision": 0.6666666666666666,
+        "recall": 0.575,
+        "f1-score": 0.6174496644295302,
+        "support": 80.0
+      },
+      "Simple Cracks": {
+        "precision": 0.8406169665809768,
+        "recall": 0.8406169665809768,
+        "f1-score": 0.8406169665809768,
+        "support": 389.0
+      },
+      "Without Crack": {
+        "precision": 0.8907766990291263,
+        "recall": 0.9152119700748129,
+        "f1-score": 0.9028290282902829,
+        "support": 401.0
+      },
+      "accuracy": 0.8505747126436781,
+      "macro avg": {
+        "precision": 0.7993534440922566,
+        "recall": 0.7769429788852632,
+        "f1-score": 0.78696521976693,
+        "support": 870.0
+      },
+      "weighted avg": {
+        "precision": 0.8477411375218541,
+        "recall": 0.8505747126436781,
+        "f1-score": 0.8487705902284665,
+        "support": 870.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        46,
+        31,
+        3
+      ],
+      [
+        20,
+        327,
+        42
+      ],
+      [
+        3,
+        31,
+        367
+      ]
+    ]
+  },
+  "test": {
+    "sample_count": 874,
+    "accuracy": 0.8478260869565217,
+    "macro_f1": 0.7963530246864895,
+    "per_class": {
+      "Multibranched Crack": {
+        "precision": 0.6986301369863014,
+        "recall": 0.6219512195121951,
+        "f1-score": 0.6580645161290323,
+        "support": 82.0
+      },
+      "Simple Cracks": {
+        "precision": 0.8415584415584415,
+        "recall": 0.8307692307692308,
+        "f1-score": 0.8361290322580646,
+        "support": 390.0
+      },
+      "Without Crack": {
+        "precision": 0.8798076923076923,
+        "recall": 0.9104477611940298,
+        "f1-score": 0.8948655256723717,
+        "support": 402.0
+      },
+      "accuracy": 0.8478260869565217,
+      "macro avg": {
+        "precision": 0.8066654236174783,
+        "recall": 0.7877227371584853,
+        "f1-score": 0.7963530246864895,
+        "support": 874.0
+      },
+      "weighted avg": {
+        "precision": 0.8457415969660883,
+        "recall": 0.8478260869565217,
+        "f1-score": 0.8464388492259945,
+        "support": 874.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        51,
+        29,
+        2
+      ],
+      [
+        18,
+        324,
+        48
+      ],
+      [
+        4,
+        32,
+        366
+      ]
+    ]
+  },
+  "fitting_seconds": 1.9859516670003359,
+  "model_path": "models/cics_hog_mlp.joblib",
+  "total_seconds": 20.405440497999734
+}

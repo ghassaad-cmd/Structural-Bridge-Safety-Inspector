@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.env
+.coverage
+htmlcov/
+.dist/
+build/
+dist/
+*.egg-info/
+/data/CICS/
+/models/*.joblib
+/models/*.pkl
+/src/bridge_safety_inspector/CICS\ Dataset.zip
